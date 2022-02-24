@@ -1,23 +1,20 @@
 import styled from "styled-components";
 
 import Head from "@components/Head";
+import Map from "@components/Map";
 
 const Home: React.FC = () => {
   return (
-    <>
+    <Container>
       <Head title={"All the latest news about world conflicts"} />
-      <Container>{/* <Map /> */}</Container>
-    </>
+      <Map />
+    </Container>
   );
 };
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-
-  // TODO: delete this
-  background: red;
-  height: 100vh;
 `;
 
 export default Home;
