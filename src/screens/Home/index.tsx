@@ -8,14 +8,30 @@ const Home: React.FC = () => {
   return (
     <Container>
       <Head title={"All the latest news about world conflicts"} />
-      <Map />
-      <Feed />
+      <Featured>
+        <Map />
+        <Feed />
+      </Featured>
+      <div>some content</div>
+      <div>some content</div>
+      <div>some content</div>
+      <div>some content</div>
+      <div>some content</div>
+      <div>some content</div>
+      <div>some content</div>
     </Container>
   );
 };
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+`;
+
+const Featured = styled.div`
+  display: flex;
+  height: calc(100vh - 30px);
 `;
 
 export default Home;
