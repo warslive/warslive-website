@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import React from "react";
+import List from "./List";
+import feedData from "@data/feed";
 
 const Feed: React.FC = () => {
   return (
@@ -8,6 +10,7 @@ const Feed: React.FC = () => {
         <Title>{"Live Feed"}</Title>
         <SubTitle>{"Ukraine news 🇺🇦"}</SubTitle>
       </Header>
+      <List data={feedData} />
     </Container>
   );
 };
