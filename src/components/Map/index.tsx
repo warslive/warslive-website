@@ -28,8 +28,8 @@ const Map: React.FC = () => {
 
 const Container = styled.div`
   position: relative;
-  height: 100vh;
-  width: 100%;
+  height: 100%;
+  width: 75%;
 `;
 
 export default Map;
