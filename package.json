@@ -21,6 +21,7 @@
     "styled-components": "^5.2.3"
   },
   "devDependencies": {
+    "@types/mapbox-gl": "^2.6.1",
     "@types/node": "15.0.0",
     "@types/react": "17.0.4",
     "@types/react-dom": "17.0.3",
