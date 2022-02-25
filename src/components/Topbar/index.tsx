@@ -7,6 +7,7 @@ const Navbar: React.FC = () => {
   return (
     <Container>
       <Section>
+        <Headerlogo></Headerlogo>
         <Link href={ROUTES.HOME}>
           <BrandTitle>{APP.NAME}</BrandTitle>
         </Link>
@@ -111,5 +112,12 @@ const SocialLink = styled(Link)`
 `;
 
 const SocialIcon = styled.i``;
+
+const Headerlogo = styled.img.attrs({
+  src: "/static/images/logo/warslive.png",
+})`
+  width: 30px;
+  height: 30px;
+`;
 
 export default Navbar;
