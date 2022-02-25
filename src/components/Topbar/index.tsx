@@ -2,19 +2,12 @@ import styled from "styled-components";
 import Link from "../Link";
 import ROUTES from "@constants/routes";
 import APP from "@constants/app";
-import Image from "next/image";
-import Sitelogo from "../../../public/static/images/logo/warslive.png";
 
 const Navbar: React.FC = () => {
   return (
     <Container>
       <Section>
-        <Image
-          src={Sitelogo}
-          alt="logo of the site"
-          width="30px"
-          height="30px"
-        />
+        <Headerlogo></Headerlogo>
         <Link href={ROUTES.HOME}>
           <BrandTitle>{APP.NAME}</BrandTitle>
         </Link>
@@ -119,5 +112,12 @@ const SocialLink = styled(Link)`
 `;
 
 const SocialIcon = styled.i``;
+
+const Headerlogo = styled.img.attrs({
+  src: "/static/images/logo/warslive.png",
+})`
+  width: 30px;
+  height: 30px;
+`;
 
 export default Navbar;
