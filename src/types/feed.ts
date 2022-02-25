@@ -3,5 +3,4 @@ export type Feed = {
   desc: string;
   link: string;
   thumbnail_url: string;
-  tags: Array<string>;
 };
