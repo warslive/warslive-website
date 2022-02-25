@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 import Head from "@components/Head";
+import Feed from "@components/Feed";
 
 const Home: React.FC = () => {
   return (
     <>
       <Head title={"All the latest news about world conflicts"} />
-      <Container>{/* <Map /> */}</Container>
+      <Container>
+        {/* <Map /> */}
+        <Feed />
+      </Container>
     </>
   );
 };
