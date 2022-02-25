@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
           <BrandTitle>{APP.NAME}</BrandTitle>
         </Link>
         <Online>
-          <span>•</span>
+          <Indicator />
           50 users watching
         </Online>
       </Section>
@@ -62,10 +62,29 @@ const BrandTitle = styled.h1`
 `;
 
 const Online = styled.div`
+  display: flex;
+  align-items: center;
   color: ${({ theme }) => theme.colors.text.light};
+`;
 
-  span {
-    margin: 0 8px;
+const Indicator = styled.span`
+  margin: 0 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.colors.accent.red};
+  animation: pulse 1s infinite;
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 `;
 
