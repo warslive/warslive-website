@@ -21,6 +21,7 @@ const dark: Theme = {
     },
     accent: {
       light: "rgb(255, 255, 255)",
+      red: "rgb(235, 77, 75)",
     },
   },
 };
