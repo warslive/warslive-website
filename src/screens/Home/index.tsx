@@ -16,7 +16,6 @@ const Home: React.FC = () => {
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
 `;
 
 export default Home;
