@@ -9,7 +9,7 @@ const Map: React.FC = () => {
   mapboxgl.accessToken = MAPBOX_TOKEN;
 
   const mapRef = React.useRef<HTMLDivElement>(null);
-  const [map, setMap] = React.useState<mapboxgl.Map | null>(null);
+  const [, setMap] = React.useState<mapboxgl.Map | null>(null);
 
   React.useEffect(() => {
     const currentMap = new mapboxgl.Map({
