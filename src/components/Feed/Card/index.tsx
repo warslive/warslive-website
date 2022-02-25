@@ -9,7 +9,7 @@ interface FeedCardProps {
 }
 
 const FeedCard: React.FC<FeedCardProps> = ({
-  data: { title, desc, link, thumbnail_url, tags },
+  data: { title, desc, link, thumbnail_url },
 }: FeedCardProps) => {
   return (
     <Container href={link}>
@@ -22,13 +22,15 @@ const FeedCard: React.FC<FeedCardProps> = ({
         />
       </Frame>
       <Content>
-        <Tag>
-          {tags.map((tag: string, key: number) => (
-            <TagItem key={key}>{tag}</TagItem>
-          ))}
-        </Tag>
         <Title>{title}</Title>
         <Description>{desc}</Description>
+        <Source>
+          <Social>
+            <Icon className="ri-twitter-fill" />
+            <Handle>by @t_ThinkTank</Handle>
+          </Social>
+          <Time>15:41</Time>
+        </Source>
       </Content>
     </Container>
   );
@@ -69,39 +71,35 @@ const Content = styled.div`
   text-align: left;
 `;
 
-const Tag = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-`;
-
-const TagItem = styled.li`
-  margin: 2px;
-  border-radius: 9999px;
-  font-size: ${({ theme }) => theme.size.small};
-  padding: 2px 12px;
-  background-color: rgba(255, 255, 255, 0.2);
-
-  :first-child {
-    margin-left: 0;
-  }
-
-  :last-child {
-    margin-right: 0;
-  }
-`;
-
 const Title = styled.h3`
-  margin-top: 10px;
   font-size: ${({ theme }) => theme.size.medium};
   font-weight: ${({ theme }) => theme.weight.medium};
 `;
 
 const Description = styled.p`
   margin-top: 10px;
-  font-size: ${({ theme }) => theme.size.normal};
+  font-size: ${({ theme }) => theme.size.small};
   font-weight: ${({ theme }) => theme.weight.regular};
   opacity: 0.75;
 `;
+
+const Source = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: ${({ theme }) => theme.size.tiny};
+`;
+
+const Social = styled.div`
+  display: flex;
+`;
+
+const Icon = styled.i`
+  margin-right: 5px;
+`;
+
+const Handle = styled.span``;
+
+const Time = styled.span``;
 
 export default FeedCard;
