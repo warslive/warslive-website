@@ -4,6 +4,8 @@ import { ThemeProvider } from "styled-components";
 import themes from "@services/themes";
 import GlobalStyle from "@components/Layout/GlobalStyle";
 import Topbar from "@components/Topbar";
+import Sidebar from "@components/SideBar";
+import Feed from "@components/Feed";
 import Head from "@components/Head";
 import Script from "@components/Script";
 
@@ -16,6 +18,8 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
       <Head description={APP.DESCRIPTION} />
       <GlobalStyle />
       <Topbar />
+      <Sidebar />
+      <Feed />
       <Component {...pageProps} />
       <Script />
     </ThemeProvider>
