@@ -13,7 +13,7 @@ const LiveFeed: React.FC = () => {
           </DescriptionFeed>
           <Tweet>
             <Div>
-              <LogoTwitter src={"static/images/logo/Twitter_Icon.svg"} />
+              <SocialIcon className={"ri-twitter-fill"} />
               <TweetPseudo>by @L_ThinkTank</TweetPseudo>
             </Div>
             <Horaire>15h42</Horaire>
@@ -48,6 +48,8 @@ const TitleFeed = styled.h2`
     font-size: 20px;
   }
 `;
+const SocialIcon = styled.i``;
+
 const DescriptionFeed = styled.p`
   color: #a4a4a4;
   font-size: 10px;
