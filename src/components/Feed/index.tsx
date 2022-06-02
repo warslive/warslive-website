@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const Feed: React.FC = () => {
   const [isExpand, setisExpand] = useState(false);
-  const affichage = () => {
+  const changeExpand = () => {
     if (isExpand) {
       setisExpand(false);
     } else {
@@ -19,7 +19,7 @@ const Feed: React.FC = () => {
       <Title>
         Ukraine News <ImgFlag src="/static/images/flag/ukraine.png" />
       </Title>
-      <LinkImg id="LinkImg" onClick={affichage}>
+      <LinkImg id="LinkImg" onClick={changeExpand}>
         <SocialIcon className={"ri-earth-line"} />
       </LinkImg>
       <SectionLiveFeed>
