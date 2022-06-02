@@ -20,21 +20,21 @@ const Feed: React.FC = () => {
         Ukraine News <ImgFlag src="/static/images/flag/ukraine.png" />
       </Title>
       <LinkImg id="LinkImg" onClick={affichage}>
-        <ImageWorld src={"/static/images/logo/world.jpg"} />
+        <SocialIcon className={"ri-earth-line"} />
       </LinkImg>
       <SectionLiveFeed>
         <LiveFeed />
         <LiveFeed />
       </SectionLiveFeed>
-      <SectionStat>
+      <StatSection>
         <Title>Statistics</Title>
-        <ContenueStats>
+        <StatContent>
           <Stat />
           <Stat />
           <Stat />
           <Stat />
-        </ContenueStats>
-      </SectionStat>
+        </StatContent>
+      </StatSection>
     </Container>
   );
 };
@@ -91,9 +91,9 @@ const SectionLiveFeed = styled.div`
   }
 `;
 
-const SectionStat = styled.div``;
+const StatSection = styled.div``;
 
-const ContenueStats = styled.div`
+const StatContent = styled.div`
   max-width: 100%;
   overflow: auto;
   display: flex;
@@ -125,5 +125,6 @@ const ImageWorld = styled.img`
     width: 40px;
   }
 `;
+const SocialIcon = styled.i``;
 
 export default Feed;
