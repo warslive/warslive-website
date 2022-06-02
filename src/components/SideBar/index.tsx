@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
   return (
     <Container>
       <Section1>
-        <Affichage etat="true" />
+        <Affichage />
         <GroupImage>
           <LinkImg onClick={hide}>
             <ImageMap src={"/static/images/logo/map.svg"} />
