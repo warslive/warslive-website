@@ -27,10 +27,10 @@ const Navbar: React.FC = () => {
         <Affichage etat="true" />
         <GroupImage>
           <LinkImg onClick={hide}>
-            <ImageMap src={"/static/images/logo/map.svg"} />
+            <SocialIcon className={"ri-map-2-line"} />
           </LinkImg>
           <LinkImg onClick={show}>
-            <ImageCam src={"/static/images/logo/cam.svg"} />
+            <SocialIcon className={"ri-live-line"} />
           </LinkImg>
         </GroupImage>
       </Section1>
@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
 };
 
 const Section1 = styled.div``;
-
+const SocialIcon = styled.i``;
 const Container = styled.section`
   transition: all 1s;
   position: fixed;
