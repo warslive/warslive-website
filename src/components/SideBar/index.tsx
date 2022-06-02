@@ -5,22 +5,9 @@ import FeedInformations from "@components/FeedInformations";
 const Navbar: React.FC = () => {
   const [etat, setEtat] = useState(false);
   const show = () => {
-    const logo = document.querySelector<HTMLElement>(".ri-map-2-line");
-    const logo2 = document.querySelector<HTMLElement>(".ri-live-line");
-    if (logo && logo2) {
-      logo.style = "color: #FFF";
-      logo2.style = "color: #2fcc71";
-    }
     setEtat(true);
   };
   const hide = () => {
-    const logo = document.querySelector<HTMLElement>(".ri-map-2-line");
-    const logo2 = document.querySelector<HTMLElement>(".ri-live-line");
-    if (logo && logo2) {
-      logo.style = "color: #2fcc71";
-      logo2.style = "color: #FFF";
-    }
-
     setEtat(false);
   };
 
@@ -38,10 +25,10 @@ const Navbar: React.FC = () => {
         <Affichage />
         <GroupImage>
           <LinkImg onClick={hide}>
-            <SocialIcon className={"ri-map-2-line"} />
+            <SocialIcon isExpand={etat} className={"ri-map-2-line"} />
           </LinkImg>
           <LinkImg onClick={show}>
-            <SocialIcon className={"ri-live-line"} />
+            <SocialIcon2 isExpand={etat} className={"ri-live-line"} />
           </LinkImg>
         </GroupImage>
       </Section1>
@@ -50,8 +37,13 @@ const Navbar: React.FC = () => {
 };
 
 const Section1 = styled.div``;
-const SocialIcon = styled.i`
+const SocialIcon = styled.i<{ isExpand: boolean }>`
   font-size: 30px;
+  ${({ isExpand }) => (isExpand ? "color: #FFF" : "color: #2fcc71")}
+`;
+const SocialIcon2 = styled.i<{ isExpand: boolean }>`
+  font-size: 30px;
+  ${({ isExpand }) => (isExpand ? "color: #2fcc71" : "color: #FFF")}
 `;
 const Container = styled.section`
   transition: all 1s;
