@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import TimeLine from "@components/TimeLine";
-import WordWidNews from "@components/WordWidNews";
+import WordWidNews from "@components/WorldWideNews";
 
 const FeedInformations: React.FC = () => {
   return (
