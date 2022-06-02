@@ -4,7 +4,7 @@ const Stat: React.FC = () => {
   return (
     <Container>
       <Value>0.90$/L</Value>
-      <TitleStat>Petrol</TitleStat>
+      <Title>Petrol</Title>
     </Container>
   );
 };
@@ -25,7 +25,7 @@ const Value = styled.p`
   font-size: 15px;
 `;
 
-const TitleStat = styled.h3`
+const Title = styled.h3`
   font-size: 10px;
 `;
 
