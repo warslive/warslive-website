@@ -5,12 +5,23 @@ import FeedInformations from "@components/FeedInformations";
 const Navbar: React.FC = () => {
   const [etat, setEtat] = useState(false);
   const show = () => {
+    const logo = document.querySelector<HTMLElement>(".ri-map-2-line");
+    const logo2 = document.querySelector<HTMLElement>(".ri-live-line");
+    if (logo && logo2) {
+      logo.style = "color: #FFF";
+      logo2.style = "color: #2fcc71";
+    }
     setEtat(true);
-    console.log(etat);
   };
   const hide = () => {
+    const logo = document.querySelector<HTMLElement>(".ri-map-2-line");
+    const logo2 = document.querySelector<HTMLElement>(".ri-live-line");
+    if (logo && logo2) {
+      logo.style = "color: #2fcc71";
+      logo2.style = "color: #FFF";
+    }
+
     setEtat(false);
-    console.log(etat);
   };
 
   const Affichage = () => {
@@ -39,7 +50,9 @@ const Navbar: React.FC = () => {
 };
 
 const Section1 = styled.div``;
-const SocialIcon = styled.i``;
+const SocialIcon = styled.i`
+  font-size: 30px;
+`;
 const Container = styled.section`
   transition: all 1s;
   position: fixed;
