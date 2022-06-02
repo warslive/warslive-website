@@ -5,21 +5,21 @@ const TimeLine: React.FC = () => {
     <Container>
       <Title>War Timeline</Title>
       <Description>From now to the past</Description>
-      <AllTimeLine>
-        <OneTimeLine>now · Ukraine War</OneTimeLine>
+      <EventList>
+        <Event>now · Ukraine War</Event>
         <Separator />
-        <OneTimeLine>2014-now · Defeat ISIS</OneTimeLine>
+        <Event>2014-now · Defeat ISIS</Event>
         <Separator />
-        <OneTimeLine>2014-now · Defeat ISIS</OneTimeLine>
+        <Event>2014-now · Defeat ISIS</Event>
         <Separator />
-        <OneTimeLine>2014-now · Defeat ISIS</OneTimeLine>
+        <Event>2014-now · Defeat ISIS</Event>
         <Separator />
-        <OneTimeLine>2014-now · Defeat ISIS</OneTimeLine>
+        <Event>2014-now · Defeat ISIS</Event>
         <Separator />
-        <OneTimeLine>2014-now · Defeat ISIS</OneTimeLine>
+        <Event>2014-now · Defeat ISIS</Event>
         <Separator />
-        <OneTimeLine>2014-now · Defeat ISIS</OneTimeLine>
-      </AllTimeLine>
+        <Event>2014-now · Defeat ISIS</Event>
+      </EventList>
     </Container>
   );
 };
@@ -40,14 +40,14 @@ const Description = styled.p`
     font-size: 10px;
   }
 `;
-const AllTimeLine = styled.div`
+const EventList = styled.div`
   width: 100%;
   overflow-x: auto;
   display: flex;
   align-items: center;
   margin-top: 20px;
 `;
-const OneTimeLine = styled.div`
+const Event = styled.div`
   background-color: #ffa4a4;
   padding: 8px 19px;
   border-radius: 20px;
