@@ -68,23 +68,4 @@ const LinkImg = styled.button`
   cursor: pointer;
   margin-top: 50px;
 `;
-
-const ImageMap = styled.img`
-  transition: all 1s;
-  width: 30px;
-  @media screen and (max-width: 700px) {
-    transition: all 1s;
-    width: 20px;
-  }
-`;
-
-const ImageCam = styled.img`
-  transition: all 1s;
-  width: 30px;
-  @media screen and (max-width: 700px) {
-    transition: all 1s;
-    width: 20px;
-  }
-`;
-
 export default Navbar;
