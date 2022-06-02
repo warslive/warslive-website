@@ -115,16 +115,6 @@ const LinkImg = styled.button`
     right: 5px;
   }
 `;
-const ImageWorld = styled.img`
-  color: #ffffff;
-  fill: white;
-  transition: all 1s;
-  width: 30px;
-  @media screen and (max-width: 700px) {
-    transition: all 1s;
-    width: 40px;
-  }
-`;
 const SocialIcon = styled.i``;
 
 export default Feed;

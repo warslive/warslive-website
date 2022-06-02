@@ -67,10 +67,6 @@ const Tweet = styled.div`
 const Div = styled.div`
   display: flex;
 `;
-const LogoTwitter = styled.img`
-  width: 20px;
-  margin-right: 10px;
-`;
 const TweetPseudo = styled.p`
   font-size: 8px;
   display: flex;
