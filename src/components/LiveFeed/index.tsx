@@ -6,7 +6,7 @@ const LiveFeed: React.FC = () => {
       <OneFeed>
         <Img src={"/static/images/feed/feed1.png"} />
         <Description>
-          <TitleFeed>Town under control</TitleFeed>
+          <Title>Town under control</Title>
           <DescriptionFeed>
             A few minutes ago, the town of Soumy (260k inhabitants) fell
             entirely into the hands of the Russian army.
@@ -28,7 +28,7 @@ const Container = styled.section``;
 const OneFeed = styled.div`
   border-radius: 10px;
   background-color: #232323;
-  margin: 10px;
+  margin: 30px;
   padding-top: 10px;
   margin-top: 25px;
   display: flex;
@@ -41,7 +41,7 @@ const Img = styled.img`
 const Description = styled.div`
   margin: 10px;
 `;
-const TitleFeed = styled.h2`
+const Title = styled.h2`
   font-size: 15px;
   margin-bottom: 10px;
   @media screen and (min-width: 1020px) {
