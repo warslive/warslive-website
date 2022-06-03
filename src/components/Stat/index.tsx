@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Stat: React.FC = () => {
   return (
     <Container>
-      <Value>0.90$/L</Value>
+      <Value>0.90$ / L</Value>
       <Title>Petrol</Title>
     </Container>
   );
@@ -16,8 +16,12 @@ const Container = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 22%;
+  height: 67px;
+  :last-child {
+    margin-right: 0;
+    font-size: 30px;
+  }
 `;
 
 const Value = styled.p`

@@ -16,9 +16,10 @@ const Feed: React.FC = () => {
   return (
     <Container isExpand={isExpand} id="FeedContainer">
       <Title>Live Feed</Title>
-      <Title>
-        Ukraine News <ImgFlag src="/static/images/flag/ukraine.png" />
-      </Title>
+      <ContainerTitle2>
+        <Title2>Ukraine News</Title2>
+        <ImgFlag src="/static/images/flag/ukraine.png" />
+      </ContainerTitle2>
       <LinkImg id="LinkImg" onClick={changeExpand}>
         <SocialIcon className={"ri-earth-line"} />
       </LinkImg>
@@ -27,7 +28,7 @@ const Feed: React.FC = () => {
         <LiveFeed />
       </SectionLiveFeed>
       <StatSection>
-        <Title>Statistics</Title>
+        <Title3 className="TitleStat">Statistics</Title3>
         <StatContent>
           <Stat />
           <Stat />
@@ -49,6 +50,10 @@ const Container = styled.section<{ isExpand: boolean }>`
   height: 100%;
   width: 23%;
   background-color: #101010;
+  @media screen and (max-width: 1100px) {
+    transition: all 1s;
+    width: 30%;
+  }
   @media screen and (max-width: 700px) {
     transition: all 1s;
     ${({ isExpand }) => (isExpand ? "width: 50%" : "right: -30%")}
@@ -57,38 +62,52 @@ const Container = styled.section<{ isExpand: boolean }>`
     transition: all 1s;
     ${({ isExpand }) => (isExpand ? "width: 85%" : "right: -30%")}
   }
-  @media screen and (min-width: 760px) {
-    transition: all 1s;
-    width: 40%;
-  }
 `;
 
 const Title = styled.h2`
-  margin-bottom: 10px;
-  text-align: center;
+  margin: 20px 0 10px 30px;
+  font-size: 30px;
+  font-weight: bold;
 `;
-
+const ContainerTitle2 = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+`;
+const Title2 = styled.h3`
+  font-size: 15px;
+`;
+const Title3 = styled.h3`
+  margin: 20px 0 10px 30px;
+  font-size: 30px;
+  font-weight: bold;
+`;
 const SectionLiveFeed = styled.div`
   overflow: scroll;
-  height: 80%;
+  height: 75%;
+  @media screen and (max-height: 1000px) {
+    height: 73%;
+  }
   @media screen and (max-height: 900px) {
-    height: 80%;
-  }
-  @media screen and (max-height: 850px) {
-    height: 75%;
-  }
-  @media screen and (max-height: 700px) {
     height: 70%;
   }
-  @media screen and (max-height: 600px) {
+  @media screen and (max-height: 800px) {
     height: 65%;
   }
-  @media screen and (max-height: 500px) {
+  @media screen and (max-height: 700px) {
     height: 60%;
   }
-  @media screen and (max-height: 400px) {
+  @media screen and (max-height: 600px) {
     height: 55%;
   }
+  @media screen and (max-height: 500px) {
+    height: 45%;
+  }
+  @media screen and (max-height: 400px) {
+    height: 37%;
+  }
+  /*
+  */
 `;
 
 const StatSection = styled.div``;
@@ -98,8 +117,12 @@ const StatContent = styled.div`
   overflow: auto;
   display: flex;
   justify-content: center;
+  text-align: center;
 `;
-const ImgFlag = styled.img``;
+const ImgFlag = styled.img`
+  width: 20px;
+  margin-left: 7px;
+`;
 
 const LinkImg = styled.button`
   display: none;

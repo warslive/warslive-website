@@ -6,7 +6,7 @@ const LiveFeed: React.FC = () => {
       <OneFeed>
         <Img src={"/static/images/feed/feed1.png"} />
         <Description>
-          <TitleFeed>Town under control</TitleFeed>
+          <Title>Town under control</Title>
           <DescriptionFeed>
             A few minutes ago, the town of Soumy (260k inhabitants) fell
             entirely into the hands of the Russian army.
@@ -26,14 +26,24 @@ const LiveFeed: React.FC = () => {
 
 const Container = styled.section``;
 const OneFeed = styled.div`
+  transition: all 1s;
   border-radius: 10px;
   background-color: #232323;
-  margin: 10px;
+  margin: 30px;
   padding-top: 10px;
   margin-top: 25px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media screen and (max-width: 1100px) {
+    transition: all 1s;
+    margin: 0;
+    margin-left: 5px;
+    margin-bottom: 25px;
+    :first-of-type {
+      margin-top: 25px;
+    }
+  }
 `;
 const Img = styled.img`
   width: 90%;
@@ -41,21 +51,15 @@ const Img = styled.img`
 const Description = styled.div`
   margin: 10px;
 `;
-const TitleFeed = styled.h2`
-  font-size: 15px;
+const Title = styled.h2`
   margin-bottom: 10px;
-  @media screen and (min-width: 1020px) {
-    font-size: 20px;
-  }
+  font-size: 20px;
 `;
 const SocialIcon = styled.i``;
 
 const DescriptionFeed = styled.p`
   color: #a4a4a4;
-  font-size: 10px;
-  @media screen and (min-width: 1020px) {
-    font-size: 15px;
-  }
+  font-size: 15px;
 `;
 const Tweet = styled.div`
   margin-top: 10px;

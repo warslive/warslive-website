@@ -16,6 +16,7 @@ const FeedInformations: React.FC = () => {
 
 const Hr = styled.hr`
   background-color: white;
+  margin-bottom: 25px;
 `;
 const Container = styled.section`
   transition: all 1s;
@@ -26,24 +27,27 @@ const Container = styled.section`
   top: 30px;
   left: 0;
   background-color: #1010109e;
+  @media screen and (max-width: 1100px) {
+    transition: all 1s;
+    width: 70%;
+  }
   @media screen and (max-width: 700px) {
     transition: all 1s;
     width: 100%;
-  }
-  @media screen and (min-width: 760px) {
-    transition: all 1s;
-    width: 60%;
   }
 `;
 
 const Container2 = styled.section`
   transition: all 1s;
-  margin-top: 20px;
-  margin-left: 100px;
-  margin-right: 15px;
+  margin: 20px 75px 0 100px;
+  @media screen and (max-width: 1100px) {
+    transition: all 1s;
+    margin-right: 50px;
+  }
   @media screen and (max-width: 700px) {
     transition: all 1s;
     margin-left: 58px;
+    margin-right: 2px;
   }
 `;
 

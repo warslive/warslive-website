@@ -8,17 +8,21 @@ const TimeLine: React.FC = () => {
       <EventList>
         <Event>now · Ukraine War</Event>
         <Separator />
-        <Event>2014-now · Defeat ISIS</Event>
+        <Event>now · Ukraine War</Event>
         <Separator />
-        <Event>2014-now · Defeat ISIS</Event>
+        <Event>now · Ukraine War</Event>
         <Separator />
-        <Event>2014-now · Defeat ISIS</Event>
+        <Event>now · Ukraine War</Event>
         <Separator />
-        <Event>2014-now · Defeat ISIS</Event>
+        <Event>now · Ukraine War</Event>
         <Separator />
-        <Event>2014-now · Defeat ISIS</Event>
+        <Event>now · Ukraine War</Event>
         <Separator />
-        <Event>2014-now · Defeat ISIS</Event>
+        <Event>now · Ukraine War</Event>
+        <Separator />
+        <Event>now · Ukraine War</Event>
+        <Separator />
+        <Event>now · Ukraine War</Event>
       </EventList>
     </Container>
   );
@@ -27,6 +31,7 @@ const TimeLine: React.FC = () => {
 const Container = styled.section``;
 
 const Title = styled.h2`
+  font-weight: 500;
   font-size: 30px;
   color: #ffffff;
   @media screen and (max-width: 700px) {
@@ -40,21 +45,26 @@ const Description = styled.p`
     font-size: 10px;
   }
 `;
+
 const EventList = styled.div`
+  overflow-x: scroll;
   width: 100%;
-  overflow-x: auto;
+  height: 100px;
   display: flex;
   align-items: center;
-  margin-top: 20px;
 `;
 const Event = styled.div`
+  white-space: nowrap;
   background-color: #ffa4a4;
-  padding: 8px 19px;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px;
   border-radius: 20px;
 `;
 const Separator = styled.div`
   min-width: 20px;
-  height: 5px;
+  height: 6px;
   background-color: #3d3d3d;
 `;
 export default TimeLine;
