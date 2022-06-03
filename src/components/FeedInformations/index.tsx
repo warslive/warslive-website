@@ -32,7 +32,7 @@ const Container = styled.section`
   }
   @media screen and (min-width: 760px) {
     transition: all 1s;
-    width: 60%;
+    width: 75%;
   }
 `;
 
