@@ -8,17 +8,22 @@ const TimeLine: React.FC = () => {
       <AllTimeLine>
         <OneTimeLine>now · Ukraine War</OneTimeLine>
         <Separator />
-        <OneTimeLine>2014-now · Defeat ISIS</OneTimeLine>
+        <OneTimeLine>now · Ukraine War</OneTimeLine>
         <Separator />
-        <OneTimeLine>2014-now · Defeat ISIS</OneTimeLine>
+        <OneTimeLine>now · Ukraine War</OneTimeLine>
         <Separator />
-        <OneTimeLine>2014-now · Defeat ISIS</OneTimeLine>
+        <OneTimeLine>now · Ukraine War</OneTimeLine>
         <Separator />
-        <OneTimeLine>2014-now · Defeat ISIS</OneTimeLine>
+        <OneTimeLine>now · Ukraine War</OneTimeLine>
         <Separator />
-        <OneTimeLine>2014-now · Defeat ISIS</OneTimeLine>
+        <OneTimeLine>now · Ukraine War</OneTimeLine>
         <Separator />
-        <OneTimeLine>2014-now · Defeat ISIS</OneTimeLine>
+        <OneTimeLine>now · Ukraine War</OneTimeLine>
+        <Separator />
+        <OneTimeLine>now · Ukraine War</OneTimeLine>
+        <Separator />
+        <OneTimeLine>now · Ukraine War</OneTimeLine>
+        <Separator />
       </AllTimeLine>
     </Container>
   );
@@ -41,20 +46,24 @@ const Description = styled.p`
   }
 `;
 const AllTimeLine = styled.div`
+  overflow-x: scroll;
   width: 100%;
-  overflow-x: auto;
+  height: 100px;
   display: flex;
   align-items: center;
-  margin-top: 20px;
 `;
 const OneTimeLine = styled.div`
+  white-space: nowrap;
   background-color: #ffa4a4;
-  padding: 8px 19px;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px;
   border-radius: 20px;
 `;
 const Separator = styled.div`
   min-width: 20px;
-  height: 5px;
-  background-color: #3d3d3d;
+  height: 10px;
+  background-color: yellow;
 `;
 export default TimeLine;
