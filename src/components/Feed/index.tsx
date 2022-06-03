@@ -50,6 +50,10 @@ const Container = styled.section<{ isExpand: boolean }>`
   height: 100%;
   width: 23%;
   background-color: #101010;
+  @media screen and (max-width: 1100px) {
+    transition: all 1s;
+    width: 30%;
+  }
   @media screen and (max-width: 700px) {
     transition: all 1s;
     ${({ isExpand }) => (isExpand ? "width: 50%" : "right: -30%")}
@@ -57,10 +61,6 @@ const Container = styled.section<{ isExpand: boolean }>`
   @media screen and (max-width: 500px) {
     transition: all 1s;
     ${({ isExpand }) => (isExpand ? "width: 85%" : "right: -30%")}
-  }
-  @media screen and (min-width: 760px) {
-    transition: all 1s;
-    width: 25%;
   }
 `;
 
