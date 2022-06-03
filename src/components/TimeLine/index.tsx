@@ -5,8 +5,8 @@ const TimeLine: React.FC = () => {
     <Container>
       <Title>War Timeline</Title>
       <Description>From now to the past</Description>
-      <AllTimeLine>
-        <OneTimeLine>now · Ukraine War</OneTimeLine>
+      <EventList>
+        <Event>now · Ukraine War</Event>
         <Separator />
         <OneTimeLine>now · Ukraine War</OneTimeLine>
         <Separator />
@@ -45,6 +45,7 @@ const Description = styled.p`
     font-size: 10px;
   }
 `;
+
 const AllTimeLine = styled.div`
   overflow-x: scroll;
   width: 100%;
