@@ -23,7 +23,6 @@ const TimeLine: React.FC = () => {
         <OneTimeLine>now · Ukraine War</OneTimeLine>
         <Separator />
         <OneTimeLine>now · Ukraine War</OneTimeLine>
-        <Separator />
       </AllTimeLine>
     </Container>
   );
@@ -32,6 +31,7 @@ const TimeLine: React.FC = () => {
 const Container = styled.section``;
 
 const Title = styled.h2`
+  font-weight: 500;
   font-size: 30px;
   color: #ffffff;
   @media screen and (max-width: 700px) {
@@ -63,7 +63,7 @@ const OneTimeLine = styled.div`
 `;
 const Separator = styled.div`
   min-width: 20px;
-  height: 10px;
-  background-color: yellow;
+  height: 6px;
+  background-color: #3d3d3d;
 `;
 export default TimeLine;
