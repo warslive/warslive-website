@@ -70,6 +70,7 @@ const WorldWideNews: React.FC = () => {
 const Container = styled.section``;
 const Title = styled.h2`
   font-size: 30px;
+  font-weight: 500;
   color: #ffffff;
   @media screen and (max-width: 700px) {
     font-size: 20px;
