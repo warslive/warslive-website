@@ -113,10 +113,14 @@ const NewsContainer = styled.div`
 `;
 const News = styled.div`
   background-color: #262626;
-  width: 130px;
-  height: 130px;
+  width: 275px;
+  height: 275px;
   margin-right: 10px;
   margin-bottom: 10px;
   border-radius: 20px;
+  @media screen and (max-width: 400px) {
+    width: 220px;
+    height: 220px;
+  }
 `;
 export default WorldWideNews;
