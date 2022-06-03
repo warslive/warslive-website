@@ -8,22 +8,22 @@ const TimeLine: React.FC = () => {
       <EventList>
         <Event>now · Ukraine War</Event>
         <Separator />
-        <OneTimeLine>now · Ukraine War</OneTimeLine>
+        <Event>now · Ukraine War</Event>
         <Separator />
-        <OneTimeLine>now · Ukraine War</OneTimeLine>
+        <Event>now · Ukraine War</Event>
         <Separator />
-        <OneTimeLine>now · Ukraine War</OneTimeLine>
+        <Event>now · Ukraine War</Event>
         <Separator />
-        <OneTimeLine>now · Ukraine War</OneTimeLine>
+        <Event>now · Ukraine War</Event>
         <Separator />
-        <OneTimeLine>now · Ukraine War</OneTimeLine>
+        <Event>now · Ukraine War</Event>
         <Separator />
-        <OneTimeLine>now · Ukraine War</OneTimeLine>
+        <Event>now · Ukraine War</Event>
         <Separator />
-        <OneTimeLine>now · Ukraine War</OneTimeLine>
+        <Event>now · Ukraine War</Event>
         <Separator />
-        <OneTimeLine>now · Ukraine War</OneTimeLine>
-      </AllTimeLine>
+        <Event>now · Ukraine War</Event>
+      </EventList>
     </Container>
   );
 };
@@ -46,14 +46,14 @@ const Description = styled.p`
   }
 `;
 
-const AllTimeLine = styled.div`
+const EventList = styled.div`
   overflow-x: scroll;
   width: 100%;
   height: 100px;
   display: flex;
   align-items: center;
 `;
-const OneTimeLine = styled.div`
+const Event = styled.div`
   white-space: nowrap;
   background-color: #ffa4a4;
   color: #000000;
