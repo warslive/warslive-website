@@ -26,6 +26,7 @@ const LiveFeed: React.FC = () => {
 
 const Container = styled.section``;
 const OneFeed = styled.div`
+  transition: all 1s;
   border-radius: 10px;
   background-color: #232323;
   margin: 30px;
@@ -34,6 +35,15 @@ const OneFeed = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media screen and (max-width: 1100px) {
+    transition: all 1s;
+    margin: 0;
+    margin-left: 5px;
+    margin-bottom: 25px;
+    :first-of-type {
+      margin-top: 25px;
+    }
+  }
 `;
 const Img = styled.img`
   width: 90%;
@@ -42,20 +52,14 @@ const Description = styled.div`
   margin: 10px;
 `;
 const Title = styled.h2`
-  font-size: 15px;
   margin-bottom: 10px;
-  @media screen and (min-width: 1020px) {
-    font-size: 20px;
-  }
+  font-size: 20px;
 `;
 const SocialIcon = styled.i``;
 
 const DescriptionFeed = styled.p`
   color: #a4a4a4;
-  font-size: 10px;
-  @media screen and (min-width: 1020px) {
-    font-size: 15px;
-  }
+  font-size: 15px;
 `;
 const Tweet = styled.div`
   margin-top: 10px;
